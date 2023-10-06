@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=writing_test_db;trustServerCertificate=true;
+    username: sa
+    password: sqlserverdeveloper
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: create
+      show_sql: true
+      format_sql: true
+      use_sql_comments: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG # Set logging level for Hibernate SQL queries
+      springframework:
+        security: DEBUG
